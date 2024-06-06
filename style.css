@@ -164,6 +164,7 @@ nav {
 
 .header__container {
   padding-block: 12rem 18rem; /* Increase padding */
+  text-align: center; /* Center the text in the header */
 }
 
 .header__container p {
@@ -192,6 +193,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 1.5rem; /* Increase gap */
+  flex-wrap: wrap;
 }
 
 .input__group span {
@@ -218,6 +220,22 @@ nav {
 
 .input__group input::placeholder {
   color: var(--text-light);
+}
+
+.input__group button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input__group button:hover {
+  background-color: #333;
 }
 
 .about__container {
@@ -462,7 +480,7 @@ nav {
 
 .feature__card p {
   font-size: 1.75rem; /* Increase font size */
-  color: var(--text-dark);
+  color: var (--text-dark);
   line-height: 2.25rem; /* Increase line height */
 }
 
@@ -585,4 +603,32 @@ nav {
 
 .message.error {
   color: red;
+}
+
+/* Speech-to-Text Section */
+.stt__section {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background-color: #f9f9f9;
+}
+
+.stt__section .input__group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stt__section input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.activate-voice-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* Adjust the margin as needed */
 }

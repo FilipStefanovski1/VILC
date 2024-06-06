@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menu-btn");
   const navLinks = document.getElementById("nav-links");
   const menuBtnIcon = menuBtn.querySelector("i");
+  const ttsBtn = document.getElementById("tts-btn");
+  const sttBtn = document.getElementById("stt-btn");
 
   form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -74,4 +76,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Newsletter section
   ScrollReveal().reveal(".newsletter__section", scrollRevealOption);
+
+  // Text-to-Speech functionality
+  ttsBtn.addEventListener("click", () => {
+    const msg = new SpeechSynthesisUtterance();
+    msg.text = document.querySelector(".section__description").textContent;
+    window.speechSynthesis.speak(msg);
+  });
+
+  // Speech-to-Text functionality for email input
+  sttBtn.addEventListener("click", () => {
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = "en-US";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.start();
+
+    recognition.onresult = (event) => {
+      const speechResult = event.results[0][0].transcript;
+      emailInput.value = speechResult;
+    };
+
+    recognition.onerror = (event) => {
+      console.error("Error occurred in recognition: " + event.error);
+    };
+  });
 });

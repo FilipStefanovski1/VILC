@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>VILC | Language Learning Companion</title>
-  </head>
-  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
     <header class="header">
       <nav>
         <div class="nav__bar">
@@ -34,6 +33,9 @@
       <div class="section__container header__container" id="home">
         <h1>Welcome to VILC</h1>
         <p>Your Language Learning Companion for the Visually Impaired</p>
+        <div class="activate-voice-container">
+          <button class="btn" id="voice-command-btn">Activate Voice Commands</button>
+        </div>
       </div>
     </header>
 
@@ -83,6 +85,7 @@
           <p>Connect with peers and language tutors for a collaborative learning experience.</p>
         </div>
       </div>
+      <button class="btn" id="tts-btn">Read Description Aloud</button>
     </section>
 
     <section class="section__container testimonials__container" id="testimonials">
@@ -116,12 +119,13 @@
     
     <section class="section__container newsletter__section" id="newsletter">
       <div class="section__container">
-          <h2 class="section__header">Subscribe to our Newsletter</h2>
-          <p class="section__description">Stay updated with our latest news and offers.</p>
+          <h2 class="section__header">Subscribe to join the VILC Community</h2>
+          <p class="section__description">Continue learning and talk with other users!</p>
           <form id="newsletter-form">
               <div class="input__group">
                   <label for="email">Email:</label>
                   <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                  <button type="button" class="btn" id="stt-btn">Speak Email</button>
               </div>
               <button type="submit" class="btn">Subscribe</button>
           </form>
@@ -164,7 +168,8 @@
         Copyright © 2023 VILC. All rights reserved.
       </div>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
     <script src="main.js"></script>
-  </body>
+    <script src="voice.js"></script>
+</body>
 </html>
