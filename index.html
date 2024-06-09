@@ -6,170 +6,157 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>VILC | Language Learning Companion</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-    <script src="main.js"></script>
 </head>
 <body>
     <header class="header">
-      <nav>
-        <div class="nav__bar">
-          <div class="logo">
-            <a href="#home"><img src="assets/Filip Vilc 2.png" alt="VILC logo" /></a>
-          </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line" aria-label="Open menu"></i>
-          </div>
+        <nav>
+            <div class="nav__bar">
+                <div class="logo">
+                    <a href="#home"><img src="assets/batlogo.png" alt="VILC logo" /></a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line" aria-label="Open menu"></i>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links" role="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="btn nav__btn">Download Now</button>
+        </nav>
+        <div class="section__container header__container" id="home">
+            <h1>Welcome to VILC</h1>
+            <p>Your Language Learning Companion for the Visually Impaired</p>
+            <button class="btn" id="tts-btn">Read Description Aloud</button>
         </div>
-        <ul class="nav__links" id="nav-links" role="navigation">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="btn nav__btn">Download Now</button>
-      </nav>
-      <div class="section__container header__container" id="home">
-        <h1>Welcome to VILC</h1>
-        <p>Your Language Learning Companion for the Visually Impaired</p>
-        <div class="activate-voice-container">
-          <button class="btn" id="voice-command-btn">Activate Voice Commands</button>
-        </div>
-      </div>
     </header>
 
     <section class="section__container about__container" id="about">
-      <div class="about__image">
-        <img src="assets/personbraille.jpg" alt="Person using braille" />
-      </div>
-      <div class="about__content">
-        <p class="section__subheader">VILC</p>
-        <h2 class="section__header">Empowering the Visually Impaired</h2>
-        <p class="section__description">
-          VILC - Visually Impaired Language Companion, is dedicated to providing 
-          a supportive and inclusive environment for the visually impaired 
-          community all around the world. We offer a range of language learning
-          resources, tools, and activities designed to enhance communication and
-          foster independence. Our mission is to empower individuals with visual
-          impairments to thrive and succeed in a language-rich world.
-        </p>
-        
-        <div class="about__btn">
-          <button class="btn">Learn More</button>
+        <div class="about__image">
+            <img src="assets/blindpic.jpg" alt="Person using braille" />
         </div>
-      </div>
+        <div class="about__content">
+            <p class="section__subheader">VILC</p>
+            <h2 class="section__header">Empowering the Visually Impaired</h2>
+            <p class="section__description">
+                VILC - Visually Impaired Language Companion, is dedicated to providing 
+                a supportive and inclusive environment for the visually impaired 
+                community all around the world. We offer a range of language learning
+                resources, tools, and activities designed to enhance communication and
+                foster independence. Our mission is to empower individuals with visual
+                impairments to thrive and succeed in a language-rich world.
+            </p>
+        </div>
     </section>
     
     <section class="section__container features__container" id="features">
-      <h2 class="section__header">Features</h2>
-      <div class="features__grid">
-        <div class="feature__card">
-          <span class="feature__icon"><i class="ri-braille-line"></i></span>
-          <h4>Braille Integration</h4>
-          <p>Interactive Braille lessons and exercises to support language learning.</p>
+        <h2 class="section__header">Features</h2>
+        <div class="features__grid">
+            <div class="feature__card">
+                <span class="feature__icon"><i class="ri-braille-line"></i></span>
+                <h4>Braille Integration</h4>
+                <p>Interactive Braille lessons and exercises to support language learning.</p>
+            </div>
+            <div class="feature__card">
+                <span class="feature__icon"><i class="ri-volume-up-line"></i></span>
+                <h4>Text-to-Speech</h4>
+                <p>Natural-sounding voices and adjustable speech rates for ease of learning.</p>
+            </div>
+            <div class="feature__card">
+                <span class="feature__icon"><i class="ri-microphone-line"></i></span>
+                <h4>Pronunciation Practice</h4>
+                <p>Real-time feedback on pronunciation using advanced speech recognition.</p>
+            </div>
+            <div class="feature__card">
+                <span class="feature__icon"><i class="ri-community-line"></i></span>
+                <h4>Community Support</h4>
+                <p>Connect with peers and language tutors for a collaborative learning experience.</p>
+            </div>
         </div>
-        <div class="feature__card">
-          <span class="feature__icon"><i class="ri-volume-up-line"></i></span>
-          <h4>Text-to-Speech</h4>
-          <p>Natural-sounding voices and adjustable speech rates for ease of learning.</p>
-        </div>
-        <div class="feature__card">
-          <span class="feature__icon"><i class="ri-microphone-line"></i></span>
-          <h4>Pronunciation Practice</h4>
-          <p>Real-time feedback on pronunciation using advanced speech recognition.</p>
-        </div>
-        <div class="feature__card">
-          <span class="feature__icon"><i class="ri-community-line"></i></span>
-          <h4>Community Support</h4>
-          <p>Connect with peers and language tutors for a collaborative learning experience.</p>
-        </div>
-      </div>
-      <button class="btn" id="tts-btn">Read Description Aloud</button>
     </section>
 
     <section class="section__container testimonials__container" id="testimonials">
-      <h2 class="section__header">What Our Users Say</h2>
-      <div class="testimonials__grid">
-        <div class="testimonial__card">
-          <p>
-            "VILC has been a game-changer for me. The use of Braille in the lessons  fantastic and the TTS feature makes learning so much easier."
-          </p>
-          <h5>- Alex</h5>
+        <h2 class="section__header">What Our Users Say</h2>
+        <div class="testimonials__grid">
+            <div class="testimonial__card">
+                <p>
+                    "VILC has been a game-changer for me. The use of Braille in the lessons is fantastic and the TTS feature makes learning so much easier."
+                </p>
+                <h5>- Alex</h5>
+            </div>
+            <div class="testimonial__card">
+                <p>
+                    "I love the community aspect of VILC. Connecting with others who are also learning has been incredibly supportive."
+                </p>
+                <h5>- Maria</h5>
+            </div>
         </div>
-        <div class="testimonial__card">
-          <p>
-            "I love the community aspect of VILC. Connecting with others who are also learning has been incredibly supportive."
-          </p>
-          <h5>- Maria</h5>
-        </div>
-      </div>
     </section>
 
     <section class="section__container team__container" id="team">
-      <h2 class="section__header">Meet Our Team</h2>
-      <div class="team__grid">
-        <div class="team__member">
-          <img src="assets/FilipS.png" alt="Team Member 1" />
-          <h4>Filip Stefanovski</h4>
-          <p>Founder & CEO</p>
+        <h2 class="section__header">Meet Our Team</h2>
+        <div class="team__grid">
+            <div class="team__member">
+                <img src="assets/FilipS.png" alt="Team Member 1" />
+                <h4>Filip Stefanovski</h4>
+                <p>Founder & CEO</p>
+            </div>
         </div>
-      </div>
     </section>
     
     <section class="section__container newsletter__section" id="newsletter">
-      <div class="section__container">
-          <h2 class="section__header">Subscribe to join the VILC Community</h2>
-          <p class="section__description">Continue learning and talk with other users!</p>
-          <form id="newsletter-form">
-              <div class="input__group">
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                  <button type="button" class="btn" id="stt-btn">Speak Email</button>
-              </div>
-              <button type="submit" class="btn">Subscribe</button>
-          </form>
-          <p id="message" class="message"></p>
-      </div>
+        <h2 class="section__header">Subscribe to join the VILC Community</h2>
+        <p class="section__description">Continue learning and talk with other users!</p>
+        <form id="newsletter-form" class="newsletter__form" novalidate>
+            <div class="input__group input__group--horizontal">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="button-group">
+                <button type="button" class="btn" id="stt-btn">Speak Email</button>
+                <button type="submit" class="btn">Subscribe</button>
+            </div>
+        </form>
+        <p id="message" class="message"></p>
     </section>
 
     <footer class="footer" id="contact">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="logo">
-            <a href="#home"><img src="assets/Filip Vilc 2.png" alt="VILC logo" /></a>
-          </div>
-          <p class="section__description">
-            Empowering the visually impaired community with accessible language learning tools.
-          </p>
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="logo">
+                    <a href="#home"><img src="assets/batlogo.png" alt="VILC logo" /></a>
+                </div>
+                <p class="section__description">
+                    Empowering the visually impaired community with accessible language learning tools.
+                </p>
+            </div>
+            <div class="footer__col">
+                <h4>QUICK LINKS</h4>
+                <ul class="footer__links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>CONTACT US</h4>
+                <ul class="footer__links">
+                    <li><a href="mailto:fikokapo031@gmail.com">fikokapo031@gmail.com</a></li>
+                </ul>
+                <div class="footer__socials">
+                    <a href="#"><img src="assets/facebook.png" alt="Facebook" /></a>
+                    <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
+                </div>
+            </div>
         </div>
-        <div class="footer__col">
-          <h4>QUICK LINKS</h4>
-          <ul class="footer__links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <div class="footer__bar">
+            Copyright © 2023 VILC. All rights reserved.
         </div>
-        <div class="footer__col">
-          <h4>CONTACT US</h4>
-          <ul class="footer__links">
-            <li><a href="mailto:fikokapo031@gmail.com">fikokapo031@gmail.com</a></li>
-          </ul>
-          <div class="footer__socials">
-            <a href="#"><img src="assets/facebook.png" alt="Facebook" /></a>
-            <a href="#"><img src="assets/instagram.png" alt="Instagram" /></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bar">
-        Copyright © 2023 VILC. All rights reserved.
-      </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
     <script src="main.js"></script>
-    <script src="voice.js"></script>
 </body>
 </html>
