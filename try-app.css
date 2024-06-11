@@ -17,6 +17,8 @@
 
 body {
   animation: fadeIn 1.5s ease-in;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f9;
 }
 
 .section__container {
@@ -108,7 +110,7 @@ a:hover {
 }
 
 .logo {
-  max-width: 130px; /* Increased by 20% from 120px */
+  max-width: 130px;
   animation: logoSpin infinite 3s linear;
 }
 
@@ -283,13 +285,25 @@ nav {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .input__group button:hover {
   background-color: #333;
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.message.success {
+  color: green;
+}
+
+.message.error {
+  color: red;
 }
 
 .about__container {
@@ -333,11 +347,10 @@ nav {
 .footer__links {
   list-style: none;
   display: grid;
-  gap: 2rem; /* Adjusted gap */
+  gap: 1.5rem;
 }
 
 .footer__links a {
-  font-size: 1.75rem; /* Increased font size */
   color: var(--text-light);
   transition: color 0.3s;
 }
@@ -355,7 +368,7 @@ nav {
 }
 
 .footer__socials img {
-  max-width: 36px; /* Increased by 20% from 30px */
+  max-width: 36px;
   opacity: 0.8;
   transition: opacity 0.3s, transform 0.3s;
 }
@@ -370,18 +383,6 @@ nav {
   font-size: 1.25rem;
   color: var(--text-light);
   text-align: center;
-}
-
-.footer__col ul.footer__links {
-  font-size: 1.5rem;
-}
-
-.footer__col ul.footer__links li a {
-  font-size: 1.75rem;
-}
-
-.footer__col ul.footer__links li a:hover {
-  color: var(--primary-color-dark);
 }
 
 @media (max-width: 768px) {
@@ -748,4 +749,188 @@ nav {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+/* New iPhone App Section */
+.iphone-container {
+    display: flex;
+    gap: 20px;
+}
+
+.iphone {
+    width: 430px; /* Width for iPhone 14 Pro Max */
+    height: 932px; /* Height for iPhone 14 Pro Max */
+    background-color: #000;
+    border-radius: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.greeting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.greeting h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+nav a.active {
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+
+.activity-tracker {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.activity-tracker h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #666;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 10px;
+}
+
+.progress {
+    width: 14%;
+    height: 100%;
+    background-color: #333;
+}
+
+.progress-info {
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.course {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    flex: 1;
+}
+
+.course h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.review-box {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.review-box p {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.review-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review-button:hover {
+    background-color: #000;
+}
+
+.other-courses {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.course-box {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #333;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.footer-icon {
+    font-size: 24px;
+    color: #333;
+}
+
+.footer-icon.active, .footer-icon:hover {
+    color: #007aff;
+}
+
+@media (max-width: 1024px) {
+    .iphone-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
