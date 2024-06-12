@@ -10,10 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const sttBtn = document.getElementById("stt-btn");
     const aboutSection = document.getElementById("about");
 
-    // Load existing subscribers from localStorage
     const subscribers = JSON.parse(localStorage.getItem('subscribers')) || [];
 
-    // Function to update the leaderboard
     function updateLeaderboard() {
         subscribersList.innerHTML = '';
         subscribers.slice(-5).forEach(subscriber => {
@@ -23,30 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Initial call to populate the leaderboard
     updateLeaderboard();
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        // Clear previous message
         message.textContent = "";
         message.classList.remove("success", "error");
 
         const email = emailInput.value;
 
-        // Simple email validation
         if (validateEmail(email)) {
-            // Add to subscribers list and update localStorage
             subscribers.push(email);
             localStorage.setItem('subscribers', JSON.stringify(subscribers));
             updateLeaderboard();
 
-            // Simulate successful subscription
             message.textContent = "Thank you for subscribing!";
             message.classList.add("success");
 
-            // Reset form
             form.reset();
         } else {
             message.textContent = "Please enter a valid email address.";
@@ -77,36 +69,28 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 1000,
     };
 
-    // Header container
     ScrollReveal().reveal(".header__container p", scrollRevealOption);
     ScrollReveal().reveal(".header__container h1", { ...scrollRevealOption, delay: 500 });
 
-    // About container
     ScrollReveal().reveal(".about__image img", { ...scrollRevealOption, origin: "left" });
     ScrollReveal().reveal(".about__content .section__subheader", { ...scrollRevealOption, delay: 500 });
     ScrollReveal().reveal(".about__content .section__header", { ...scrollRevealOption, delay: 1000 });
     ScrollReveal().reveal(".about__content .section__description", { ...scrollRevealOption, delay: 1500 });
     ScrollReveal().reveal(".about__btn", { ...scrollRevealOption, delay: 2000 });
 
-    // Features container
     ScrollReveal().reveal(".features__grid .feature__card", { ...scrollRevealOption, interval: 500 });
 
-    // Testimonials container
     ScrollReveal().reveal(".testimonials__grid .testimonial__card", { ...scrollRevealOption, interval: 500 });
 
-    // Team container
     ScrollReveal().reveal(".team__grid .team__member", { ...scrollRevealOption, interval: 500 });
 
-    // Newsletter section
     ScrollReveal().reveal(".newsletter__section", scrollRevealOption);
 
-    // Text-to-Speech functionality
     ttsBtn.addEventListener("click", () => {
         speakText(document.querySelector(".about__content .section__description").textContent);
         aboutSection.scrollIntoView({ behavior: "smooth" });
     });
 
-    // Speech-to-Text functionality for email input
     sttBtn.addEventListener("click", () => {
         const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
         recognition.lang = "en-US";
@@ -153,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     });
 
-    // Text-to-Speech on hover for text elements
     let currentUtterance = null;
     document.querySelectorAll('p, h1, h2, h4, .nav__links a').forEach(element => {
         element.addEventListener('mouseenter', () => {
@@ -168,7 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Text-to-Speech on hover for buttons
     document.querySelectorAll('button').forEach(button => {
         button.addEventListener('mouseenter', () => {
             speakText(button.textContent);

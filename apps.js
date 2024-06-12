@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const bubbleText = document.querySelector(".bubble-text").textContent;
     const feedback = document.getElementById("feedback");
 
-    // Function to handle TTS
     function speakText(text) {
         if (window.speechSynthesis.speaking) {
             window.speechSynthesis.cancel();
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.speechSynthesis.speak(utterance);
     }
 
-    // Add hover TTS for all relevant elements
     document.querySelectorAll('p, h1, h2, h4, .nav__links a, .option span').forEach(element => {
         element.addEventListener('mouseenter', () => {
             speakText(element.textContent);
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Add hover TTS for buttons
     document.querySelectorAll('button').forEach(button => {
         button.addEventListener('mouseenter', () => {
             speakText(button.textContent);
@@ -37,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Function to handle STT
     micContainer.addEventListener("click", () => {
         if (window.SpeechRecognition || window.webkitSpeechRecognition) {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;

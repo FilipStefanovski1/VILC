@@ -108,7 +108,7 @@ a:hover {
 }
 
 .logo {
-  max-width: 130px; /* Increased by 20% from 120px */
+  max-width: 130px;
   animation: logoSpin infinite 3s linear;
 }
 
@@ -333,11 +333,11 @@ nav {
 .footer__links {
   list-style: none;
   display: grid;
-  gap: 2rem; /* Adjusted gap */
+  gap: 2rem;
 }
 
 .footer__links a {
-  font-size: 1.75rem; /* Increased font size */
+  font-size: 1.75rem;
   color: var(--text-light);
   transition: color 0.3s;
 }
@@ -355,7 +355,7 @@ nav {
 }
 
 .footer__socials img {
-  max-width: 36px; /* Increased by 20% from 30px */
+  max-width: 36px;
   opacity: 0.8;
   transition: opacity 0.3s, transform 0.3s;
 }
@@ -385,41 +385,40 @@ nav {
 }
 
 @media (max-width: 768px) {
-    nav,
-    .nav__bar {
-        background-color: var(--white);
-    }
+  nav,
+  .nav__bar {
+    background-color: var(--white);
+  }
 
-    .nav__menu__btn {
-        color: var(--primary-color);
-    }
+  .nav__menu__btn {
+    color: var(--primary-color);
+  }
 
-    .nav__links {
-        background-color: rgba(255, 255, 255, 0.9);
-    }
+  .nav__links {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
 
-    .nav__links a {
-        color: var(--primary-color);
-    }
+  .nav__links a {
+    color: var(--primary-color);
+  }
 
-    .nav__links a:hover {
-        color: var(--primary-color-dark);
-    }
+  .nav__links a:hover {
+    color: var(--primary-color-dark);
+  }
 
-    .btn.nav__btn {
-        position: fixed;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        max-width: 400px;
-        z-index: 1000;
-    }
+  .btn.nav__btn {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 400px;
+    z-index: 1000;
+  }
 
-    /* Optional: Add some padding to the body to ensure content is not hidden behind the button */
-    body {
-        padding-bottom: 60px;
-    }
+  body {
+    padding-bottom: 60px;
+  }
 }
 
 @media (width > 576px) {
@@ -495,7 +494,6 @@ nav {
   }
 }
 
-/* Ensure all text in the footer is black */
 .footer,
 .footer a,
 .footer h4,
@@ -503,7 +501,6 @@ nav {
   color: var(--primary-color-dark);
 }
 
-/* Ensure the background for the footer and its components is white */
 .footer,
 .footer__container,
 .footer__col,
@@ -511,17 +508,14 @@ nav {
   background-color: var(--white);
 }
 
-/* Adjust link hover color to black for better visibility on a white background */
 .footer__links a:hover {
   color: var(--primary-color-dark);
 }
 
-/* Optionally, adjust the social icons' hover effect to fit the black and white theme */
 .footer__socials img:hover {
   opacity: 0.8;
 }
 
-/* Features Section */
 .features__container {
   text-align: center;
   background-color: var(--white);
@@ -562,7 +556,6 @@ nav {
   line-height: 2.25rem;
 }
 
-/* Testimonials Section */
 .testimonials__container {
   text-align: center;
   background-color: var(--white);
@@ -596,7 +589,6 @@ nav {
   color: var(--primary-color);
 }
 
-/* Team Section */
 .team__container {
   text-align: center;
   background-color: var(--white);
@@ -637,7 +629,6 @@ nav {
   color: var(--text-dark);
 }
 
-/* Newsletter Section */
 .newsletter__section {
   display: flex;
   flex-direction: column;
@@ -729,7 +720,6 @@ nav {
   color: red;
 }
 
-/* Intro Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
