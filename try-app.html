@@ -34,11 +34,12 @@
 
     <!-- New iPhone App Section -->
     <section class="section__container iphone-container" id="app">
+        <!-- First iPhone Screen with Progress and Recent Activities -->
         <div class="iphone">
             <div class="container">
                 <header>
                     <div class="greeting">
-                        <h1>Hi, Filip</h1>
+                        <h1>Hi, Marco</h1>
                         <div class="header-icons">
                         </div>
                     </div>
@@ -54,6 +55,14 @@
                         <div class="progress-info">1/7</div>
                     </div>
                 </section>
+                <section class="recent-activities">
+                    <h2>Recent Activities</h2>
+                    <ul>
+                        <li>Completed Lesson 5</li>
+                        <li>Reviewed Vocabulary</li>
+                        <li>Scored 85% on Quiz</li>
+                    </ul>
+                </section>
                 <section class="course">
                     <h2>Newcomer (A1) - Course 1</h2>
                     <div class="review-box">
@@ -61,7 +70,7 @@
                         <button class="review-button">Review now</button>
                     </div>
                     <div class="other-courses">
-                        <div class="course-box">Здраво Филип!</div>
+                        <div class="course-box">Здраво Марко!</div>
                         <div class="course-box">Добредојде</div>
                     </div>
                 </section>
@@ -92,16 +101,23 @@
                         <div class="progress-info">2/7</div>
                     </div>
                 </section>
-                <section class="course">
-                    <h2>Beginner (A2) - Course 2</h2>
-                    <div class="review-box">
-                        <p>Time to practice</p>
-                        <button class="review-button">Practice now</button>
+                <!-- New Section -->
+                <section class="new-section">
+                    <div class="close-btn">X</div>
+                    <div class="star-icon">⭐</div>
+                    <p>Repeat after me!</p>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
                     </div>
-                    <div class="other-courses">
-                        <div class="course-box">Hello Jane!</div>
-                        <div class="course-box">Welcome!</div>
+                    <div class="speech-bubble">
+                        <div class="bubble-text">Hallo mijn naam is Marco</div>
                     </div>
+                    <div class="microphone-container" id="microphone">
+                        <img src="assets/microphone.png" alt="Microphone">
+                    </div>
+                    <div id="feedback" class="feedback"></div>
                 </section>
                 <footer>
                     <div class="footer-icon">🏠 Home</div>
@@ -110,6 +126,7 @@
                 </footer>
             </div>
         </div>
+        <!-- Third iPhone Screen with Quiz -->
         <div class="iphone">
             <div class="container">
                 <header>
@@ -130,16 +147,32 @@
                         <div class="progress-info">3/7</div>
                     </div>
                 </section>
-                <section class="course">
-                    <h2>Intermediate (B1) - Course 3</h2>
-                    <div class="review-box">
-                        <p>Time to review</p>
-                        <button class="review-button">Review now</button>
+                <section class="quiz">
+                    <h2>Which of these is "the duck"?</h2>
+                    <div class="quiz-options">
+                        <label class="option">
+                            <input type="radio" name="quiz" value="turtle">
+                            <img src="assets/turtle.png" alt="la tortuga">
+                            <span>la tortuga</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="quiz" value="duck">
+                            <img src="assets/duck.png" alt="el pato">
+                            <span>el pato</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="quiz" value="elephant">
+                            <img src="assets/elephant.png" alt="el elefante">
+                            <span>el elefante</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="quiz" value="cats">
+                            <img src="assets/cats.png" alt="las gatas">
+                            <span>las gatas</span>
+                        </label>
                     </div>
-                    <div class="other-courses">
-                        <div class="course-box">Hi John!</div>
-                        <div class="course-box">Welcome back!</div>
-                    </div>
+                    <button class="btn check-answer">Check</button>
+                    <div id="answer-feedback" class="feedback"></div>
                 </section>
                 <footer>
                     <div class="footer-icon">🏠 Home</div>
@@ -151,6 +184,6 @@
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-    <script src="main.js"></script>
+    <script src="apps.js"></script>
 </body>
 </html>

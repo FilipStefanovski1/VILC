@@ -197,4 +197,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
         window.speechSynthesis.speak(currentUtterance);
     }
+
+    // Speech Recognition for the repeat section
+    const micContainer = document.getElementById("microphone");
+    const bubbleText = document.querySelector(".bubble-text").textContent;
+    const feedback = document.getElementById("feedback");
+
+    micContainer.addEventListener("click", () => {
+        if (window.SpeechRecognition || window.webkitSpeechRecognition) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new SpeechRecognition();
+
+            recognition.lang = 'nl-NL';
+            recognition.start();
+
+            recognition.onstart = () => {
+                feedback.textContent = "Listening...";
+            };
+
+            recognition.onspeechend = () => {
+                recognition.stop();
+            };
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                if (transcript.toLowerCase() === bubbleText.toLowerCase()) {
+                    feedback.textContent = "Congratulations! You said it correctly.";
+                    speakText("Congratulations! You said it correctly.");
+                } else {
+                    feedback.textContent = `Wrong! You said: ${transcript}`;
+                    speakText(`Wrong! You said: ${transcript}`);
+                }
+            };
+
+            recognition.onerror = (event) => {
+                feedback.textContent = `Error: ${event.error}`;
+                speakText(`Error: ${event.error}`);
+            };
+        } else {
+            feedback.textContent = "Speech Recognition API is not supported in this browser.";
+            speakText("Speech Recognition API is not supported in this browser.");
+        }
+    });
+
+    // Check answer for quiz
+    const checkAnswerBtn = document.querySelector('.check-answer');
+    const answerFeedback = document.getElementById('answer-feedback');
+
+    checkAnswerBtn.addEventListener('click', () => {
+        const selectedOption = document.querySelector('input[name="quiz"]:checked');
+        if (selectedOption) {
+            if (selectedOption.value === 'duck') {
+                answerFeedback.textContent = "Correct! El pato is the duck.";
+                speakText("Correct! El pato is the duck.");
+            } else {
+                answerFeedback.textContent = "Incorrect! Please try again.";
+                speakText("Incorrect! Please try again.");
+            }
+        } else {
+            answerFeedback.textContent = "Please select an answer.";
+            speakText("Please select an answer.");
+        }
+    });
 });
